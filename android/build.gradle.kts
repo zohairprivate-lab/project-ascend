@@ -1,21 +1,17 @@
 buildscript {
     repositories {
-        maven { url = uri("https://maven.aliyun.com/repository/public") }
-        maven { url = uri("https://maven.aliyun.com/repository/google") }
         google()
-        maven { url = uri("https://storage.googleapis.com/download.flutter.io") }
         mavenCentral()
+        maven { url = uri("https://storage.googleapis.com/download.flutter.io") }
     }
 }
 
 allprojects {
     repositories {
-        maven { url = uri("https://maven.aliyun.com/repository/public") }
-        maven { url = uri("https://maven.aliyun.com/repository/google") }
         google()
+        mavenCentral()
         maven { url = uri("https://storage.googleapis.com/download.flutter.io") }
         maven { url = uri("https://jitpack.io") }
-        mavenCentral()
     }
 }
 
@@ -34,8 +30,8 @@ subprojects {
     project.configurations.all {
         resolutionStrategy {
             force("com.android.tools.build:gradle:8.7.0")
-            force("org.jetbrains.kotlin:kotlin-stdlib:2.0.21")
-            force("org.jetbrains.kotlin:kotlin-stdlib-jdk8:2.0.21")
+            force("org.jetbrains.kotlin:kotlin-stdlib:2.1.0")
+            force("org.jetbrains.kotlin:kotlin-stdlib-jdk8:2.1.0")
         }
     }
 }
