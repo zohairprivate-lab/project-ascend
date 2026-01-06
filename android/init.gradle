@@ -1,24 +1,13 @@
-import org.gradle.api.artifacts.repositories.MavenArtifactRepository
 import org.gradle.api.initialization.resolve.RepositoriesMode
 
 gradle.beforeSettings { settings ->
     settings.dependencyResolutionManagement {
-        repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
-    }
-}
-
-allprojects {
-    buildscript {
+        repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
         repositories {
             maven { url 'https://maven-central.storage-download.googleapis.com/maven2/' }
             maven { url 'https://storage.googleapis.com/download.flutter.io' }
             google()
         }
-    }
-    repositories {
-        maven { url 'https://maven-central.storage-download.googleapis.com/maven2/' }
-        maven { url 'https://storage.googleapis.com/download.flutter.io' }
-        google()
     }
 }
 

@@ -20,7 +20,13 @@ pluginManagement {
 }
 
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        google()
+        maven { url = uri("https://maven-central.storage-download.googleapis.com/maven2/") }
+        maven { url = uri("https://storage.googleapis.com/download.flutter.io") }
+        maven { url = uri("https://jitpack.io") }
+    }
 }
 
 plugins {
