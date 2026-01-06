@@ -19,7 +19,11 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
-          # Removing specific version to use the latest stable
+      
+      - name: Fix Gradle Permissions
+        run: |
+          cd android
+          chmod +x gradlew
       
       - name: Get Dependencies
         run: flutter pub get
