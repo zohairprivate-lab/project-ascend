@@ -107,24 +107,28 @@ class DashboardScreen extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              q.desc,
-                              style: GoogleFonts.shareTechMono(
-                                color: Colors.blue[100],
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                q.desc,
+                                style: GoogleFonts.shareTechMono(
+                                  color: Colors.blue[100],
+                                ),
+                                overflow: TextOverflow.ellipsis,
                               ),
-                            ),
-                            Text(
-                              'REWARD: ${q.exp} EXP',
-                              style: const TextStyle(
-                                color: Colors.grey,
-                                fontSize: 10,
+                              Text(
+                                'REWARD: ${q.exp} EXP',
+                                style: const TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: 10,
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
+                        const SizedBox(width: 8),
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.red[900],
