@@ -18,8 +18,8 @@ jobs:
       
       - uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.19.0'
           channel: 'stable'
+          # Removing specific version to use the latest stable
       
       - name: Get Dependencies
         run: flutter pub get
