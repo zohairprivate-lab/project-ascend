@@ -1,7 +1,7 @@
 buildscript {
     repositories {
         google()
-        mavenCentral()
+        maven { url = uri("https://maven-central.storage-download.googleapis.com/maven2/") }
         maven { url = uri("https://storage.googleapis.com/download.flutter.io") }
     }
 }
@@ -9,7 +9,7 @@ buildscript {
 allprojects {
     repositories {
         google()
-        mavenCentral()
+        maven { url = uri("https://maven-central.storage-download.googleapis.com/maven2/") }
         maven { url = uri("https://storage.googleapis.com/download.flutter.io") }
         maven { url = uri("https://jitpack.io") }
     }
