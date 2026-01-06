@@ -19,6 +19,13 @@ subprojects {
 }
 subprojects {
     project.evaluationDependsOn(":app")
+    project.configurations.all {
+        resolutionStrategy {
+            force("com.android.tools.build:gradle:8.7.0")
+            force("org.jetbrains.kotlin:kotlin-stdlib:2.0.21")
+            force("org.jetbrains.kotlin:kotlin-stdlib-jdk8:2.0.21")
+        }
+    }
 }
 
 tasks.register<Delete>("clean") {
