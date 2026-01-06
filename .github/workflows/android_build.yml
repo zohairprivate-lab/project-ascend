@@ -24,6 +24,8 @@ jobs:
         run: |
           cd android
           chmod +x gradlew
+          rm -rf ~/.gradle/caches/
+
       
       - name: Get Dependencies
         run: flutter pub get
